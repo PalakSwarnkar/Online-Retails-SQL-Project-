@@ -1,62 +1,72 @@
-This project is an end-to-end PostgreSQL analytics case study on online retail transaction data. It focuses on transforming raw e-commerce sales records into actionable insights around revenue growth, customer behavior, product performance, and return-related risk.
+## Overview
+This project is an end-to-end **PostgreSQL analytics case study** on online retail transaction data.  
+It focuses on transforming raw e-commerce sales records into actionable insights around revenue growth, customer behavior, product performance, and return-related risk.
 
-Project Objective
+---
 
-To demonstrate how advanced SQL can be used to support real e-commerce business decisions by analyzing:
+## Project Objective
+To demonstrate how **advanced SQL** can be used to support real e-commerce business decisions by analyzing:
 
-Revenue drivers and sales trends
+- Revenue drivers and sales trends  
+- Customer retention and return behavior  
+- Product pricing inefficiencies and loss risks  
+- Cross-sell and bundling opportunities  
 
-Customer retention and return behavior
+---
 
-Product pricing inefficiencies and loss risks
+## Data Preparation (SQL)
 
-Cross-sell and bundling opportunities
+- Created raw transactional tables and ingested CSV data  
+- Converted string-based dates into proper `TIMESTAMP` format  
+- Removed incomplete transactions (missing customer IDs)  
+- Correctly handled returns using negative quantities  
 
-Data Preparation (SQL)
+All data cleaning and transformation was performed **directly in SQL**.
 
-Created raw transactional tables and ingested CSV data
+---
 
-Converted string-based dates into proper TIMESTAMP format
+## Key Analysis Performed
 
-Removed incomplete transactions (missing customer IDs)
+### Sales & Growth Analysis
+- Top revenue-generating products and countries  
+- Monthly and yearly revenue trends  
+- Peak ordering hour analysis  
 
-Correctly handled returns using negative quantities
+### Customer Behavior Analysis
+- 90-day repeat purchase rate using customer-level time logic  
+- Identification of customers with only return transactions  
 
-All data cleaning and transformation was performed directly in SQL.
+### Product Risk & Pricing Insights
+- High-volume products with low revenue (potential under-pricing)  
+- Products sold below average revenue benchmarks  
+- Product-level return rate analysis with meaningful thresholds  
 
-Key Analysis Performed
-Sales & Growth Analysis
+### Product Bundling
+- Identified products frequently bought together using self-joins on invoice data  
+- Insights for bundle creation and cross-selling strategies  
 
-Top revenue-generating products and countries
+---
 
-Monthly and yearly revenue trends
+## Dashboards
 
-Peak ordering hour analysis
+- **Sales Growth Overview**  
+  Revenue drivers, repeat purchases, country performance, peak hours, and bundling patterns  
 
-Customer Behavior Analysis
+- **Customer Risk & Product Loss**  
+  High return products, loss leaders, return-only customers, and pricing risks  
 
-90-day repeat purchase rate using customer-level time logic
+Each dashboard directly reflects the underlying **SQL logic**.
 
-Identification of customers with only return transactions
+---
 
-Product Risk & Pricing Insights
+## Tools & Skills
 
-High-volume products with low revenue (potential under-pricing)
+- **PostgreSQL**
+- Advanced SQL (CTEs, window functions, self-joins, conditional aggregation)
+- Time-based analysis & customer retention logic
+- Business-focused data analysis
 
-Products sold below average revenue benchmarks
+---
 
-Product-level return rate analysis with meaningful thresholds
-
-Product Bundling
-
-Identified products frequently bought together using self-joins on invoice data
-
-Insights for bundle creation and cross-selling strategies
-
-Dashboards
-
-Sales Growth Overview: Revenue drivers, repeat purchases, country performance, peak hours, and bundling patterns
-
-Customer Risk & Product Loss: High return products, loss leaders, return-only customers, and pricing risks
-
-Each dashboard directly reflects the underlying SQL logic.
+## Key Takeaway
+This project showcases an **end-to-end SQL workflow** — from raw data cleaning to advanced analytics — highlighting how SQL can uncover both growth opportunities and revenue leakage in real-world e-commerce data.
