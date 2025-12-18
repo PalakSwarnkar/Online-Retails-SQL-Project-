@@ -49,10 +49,10 @@ All data cleaning and transformation was performed **directly in SQL**.
 
 ## Dashboards
 
-- **Sales Growth Overview**  
+- ### 🔗 [Sales Growth Overview](images/Sales%20Growth%20Dashboard.png)
   Revenue drivers, repeat purchases, country performance, peak hours, and bundling patterns  
 
-- **Customer Risk & Product Loss**  
+- ### 🔗 [Customer Risk & Product Loss](images/Risk%20analysis%20dash.png) 
   High return products, loss leaders, return-only customers, and pricing risks  
 
 Each dashboard directly reflects the underlying **SQL logic**.
