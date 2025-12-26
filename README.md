@@ -49,7 +49,7 @@ All data cleaning and transformation was performed **directly in SQL**.
 
 ## Dashboards
 
-- ### 🔗 [Sales Growth Overview](images/Sales%20Growth%20Dashboard.png)  
+- ### 🔗 [Sales Growth Overview](images/Sales20%Growth20%Dashboard.png)  
   Revenue drivers, repeat purchases, country performance, peak hours, and bundling patterns  
 
 - ### 🔗 [Customer Risk & Product Loss](images/Risk%20analysis%20dash.png)  
