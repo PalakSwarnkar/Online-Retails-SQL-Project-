@@ -1,24 +1,6 @@
 #  Online Retail Sales
 
-##  Project Type
-**SQL Data Analysis Project**
-
----
-
-##  Tools Used
-- **PostgreSQL** – Data cleaning, transformation, and analysis  
-- **Power BI** – Interactive dashboards and visual storytelling  
-
----
-
-##  Dataset
-**Online Retail Dataset**  
-Transaction-level e-commerce data containing invoices, product details, quantities, unit prices, customer IDs, timestamps, countries, and return transactions (negative quantities).
-
----
-
-##  Project Overview
-This project is an end-to-end SQL-based analysis of an e-commerce retail dataset aimed at uncovering **sales performance, customer behavior, product risks, and revenue leakage**. The objective was to transform raw transactional data into meaningful insights that support data-driven business decisions.
+This project is an end-to-end SQL-based analysis of an e-commerce retail dataset aimed at uncovering **sales performance, customer behavior, product risks, and revenue leakage**. The objective was to transform raw transactional data into meaningful insights that support data-driven business decisions using a real-world **raw dataset** sourced from Kaggle.
 
 ---
 
@@ -128,3 +110,15 @@ Each dashboard directly maps back to SQL logic, ensuring traceability from query
 - Time-based customer behavior and retention analysis  
 - Business-oriented analytical thinking  
 - Translating raw SQL results into dashboard-ready insights  
+
+---
+
+##  Tools Used
+- **PostgreSQL** – Data cleaning, transformation, and analysis  
+- **Power BI** – Interactive dashboards and visual storytelling  
+
+---
+
+##  Dataset
+Online Retail transactional data sourced from Kaggle  
+🔗 **Raw dataset:** https://www.kaggle.com/datasets/psparks/instacart-market-basket-analysis
