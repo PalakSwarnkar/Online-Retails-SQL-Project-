@@ -1,78 +1,130 @@
-## Overview
-This project is an end-to-end **PostgreSQL analytics case study** on online retail transaction data.  
-It focuses on transforming raw e-commerce sales records into actionable insights around revenue growth, customer behavior, product performance, and return-related risk.
+#  Online Retail Sales
+
+##  Project Type
+**SQL Data Analysis Project**
 
 ---
 
-## Project Objective
-To demonstrate how **advanced SQL** can be used to support real e-commerce business decisions by analyzing:
-
-- Revenue drivers and sales trends  
-- Customer retention and return behavior  
-- Product pricing inefficiencies and loss risks  
-- Cross-sell and bundling opportunities  
+##  Tools Used
+- **PostgreSQL** – Data cleaning, transformation, and analysis  
+- **Power BI** – Interactive dashboards and visual storytelling  
 
 ---
 
-## Data Preparation (SQL)
-
-- Created raw transactional tables and ingested CSV data  
-- Converted string-based dates into proper `TIMESTAMP` format  
-- Removed incomplete transactions (missing customer IDs)  
-- Correctly handled returns using negative quantities  
-
-All data cleaning and transformation was performed **directly in SQL**.
+##  Dataset
+**Online Retail Dataset**  
+Transaction-level e-commerce data containing invoices, product details, quantities, unit prices, customer IDs, timestamps, countries, and return transactions (negative quantities).
 
 ---
 
-## Key Analysis Performed
+##  Project Overview
+This project is an end-to-end SQL-based analysis of an e-commerce retail dataset aimed at uncovering **sales performance, customer behavior, product risks, and revenue leakage**. The objective was to transform raw transactional data into meaningful insights that support data-driven business decisions.
 
-### Sales & Growth Analysis
-- Top revenue-generating products and countries  
-- Monthly and yearly revenue trends  
-- Peak ordering hour analysis  
+---
 
-### Customer Behavior Analysis
-- 90-day repeat purchase rate using customer-level time logic  
+##  Objectives
+- Analyze sales and revenue performance across products, countries, and time  
+- Measure customer retention through repeat purchase behavior  
+- Identify product-level risks such as high return rates and underpriced items  
+- Detect customers contributing to revenue loss through excessive returns  
+- Generate actionable insights for pricing, promotions, bundling, and customer strategy  
+
+---
+
+##  Key Tasks & Methodology
+
+### Data Understanding & Table Creation
+- Created a structured PostgreSQL table to store raw invoice-level transaction data  
+- Loaded data directly from CSV into the database for complete SQL-driven analysis  
+
+### Data Cleaning & Preprocessing
+- Converted invoice dates from text format to proper **TIMESTAMP** values  
+- Removed records with missing customer IDs to maintain analytical accuracy  
+- Correctly handled **returns using negative quantities**, preserving real-world retail logic  
+
+### Query Design & SQL Techniques
+- Used **CTEs** for multi-step customer retention and return-rate calculations  
+- Applied **window functions** for ranking, comparisons, and threshold-based analysis  
+- Used **self-joins** on invoice numbers to identify frequently bought product combinations  
+- Implemented **conditional aggregation** to separate sales and returns  
+- Performed **time-based analysis** using date extraction and interval logic  
+
+### Analysis Logic
+- Compared quantity sold vs revenue generated to detect pricing inefficiencies  
+- Segmented customers based on purchase and return behavior  
+- Applied minimum thresholds (units sold, return percentages) to ensure meaningful insights  
+
+---
+
+##  Key Analysis Performed
+- Product-level revenue and quantity performance analysis  
+- Country-wise and monthly sales trend analysis  
+- 90-day repeat purchase rate calculation  
 - Identification of customers with only return transactions  
-
-### Product Risk & Pricing Insights
-- High-volume products with low revenue (potential under-pricing)  
-- Products sold below average revenue benchmarks  
-- Product-level return rate analysis with meaningful thresholds  
-
-### Product Bundling
-- Identified products frequently bought together using self-joins on invoice data  
-- Insights for bundle creation and cross-selling strategies  
+- Product return frequency and return-rate analysis  
+- Detection of high-volume, low-revenue (loss-leader) products  
+- Product bundling and cross-sell analysis using invoice-level co-occurrence  
 
 ---
 
-## Dashboards
+##  Dashboards
 
-### 📈 Sales Growth Overview
+###  Sales Growth Overview Dashboard
+This dashboard focuses on **revenue drivers and growth patterns**, helping understand what is performing well and why.
+
 ![Sales Growth Dashboard](images/sales_growth_dashboard.png)
 
-Revenue drivers, repeat purchases, country performance, peak hours, and bundling patterns  
+🔗 **View Interactive Dashboard:**  
+https://mavenshowcase.com/project/54434
 
-
-### ⚠️ Customer Risk & Product Loss
-![Customer Risk & Product Loss](images/Risk%20analysis%20dash.png)
-
-High return products, loss leaders, return-only customers, and pricing risks
-  
-
-Each dashboard directly reflects the underlying **SQL logic**.
-
----
-
-## Tools & Skills
-
-- **PostgreSQL**
-- Advanced SQL (CTEs, window functions, self-joins, conditional aggregation)
-- Time-based analysis & customer retention logic
-- Business-focused data analysis
+**Key highlights:**
+- Top revenue-generating products  
+- Highest earning countries  
+- 90-day repeat purchase rate  
+- Peak ordering hour analysis  
+- Frequently bought product combinations  
 
 ---
 
-## Key Takeaway
-This project showcases an **end-to-end SQL workflow** — from raw data cleaning to advanced analytics — highlighting how SQL can uncover both growth opportunities and revenue leakage in real-world e-commerce data.
+###  Customer Risk & Product Loss Analysis Dashboard
+This dashboard highlights **risk areas and revenue leakage**, helping identify where corrective actions are needed.
+
+![Risk Analysis Dashboard](images/Risk%20analysis%20dash.png)
+
+🔗 **View Interactive Dashboard:**  
+https://mavenshowcase.com/project/54436
+
+**Key highlights:**
+- High-return products and return-rate percentages  
+- Customers with only return transactions  
+- High-volume but low-revenue products  
+- Below-average revenue product identification  
+
+Each dashboard directly maps back to SQL logic, ensuring traceability from query to insight.
+
+---
+
+##  Insights & Findings
+- A small group of products and countries contributes the majority of revenue  
+- Over **50% of customers made repeat purchases within 90 days**, indicating strong retention  
+- Several products sell in high volumes but generate low revenue, suggesting pricing issues  
+- A subset of customers made only returns, indicating potential risk or poor customer experience  
+- Certain product combinations are frequently purchased together, presenting bundling opportunities  
+
+---
+
+##  Business Impact / Value
+- Enables **pricing optimization** by identifying underpriced or loss-leading products  
+- Supports **targeted promotions** during peak ordering hours  
+- Improves **inventory and quality decisions** by highlighting high-return products  
+- Helps identify **customer risk segments** based on return behavior  
+- Provides actionable insights for **cross-selling and bundle creation**  
+
+---
+
+##  Skills Demonstrated
+- Advanced SQL (CTEs, window functions, self-joins, conditional aggregation)  
+- Data cleaning and transformation using SQL  
+- Time-based customer behavior and retention analysis  
+- Business-oriented analytical thinking  
+- Translating raw SQL results into dashboard-ready insights  
